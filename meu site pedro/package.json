@@ -1,0 +1,12 @@
+{
+  "name": "pi-ads-2019-2-root",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./projeto-site/bin/www",
+    "postinstall": "cd projeto-site && npm install"
+  },
+  "dependencies": {
+    "mysql2": "^2.1.0"
+  }
+}

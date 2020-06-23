@@ -1,0 +1,111 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+.container{
+    width:85%;
+    margin:auto;
+    overflow: hidden;
+}
+
+.showcase{
+    width: 100%;
+    background-image: linear-gradient(rgb(17, 211, 218), rgb(95, 5, 95), rgb(0, 0, 0));
+    background-repeat: no-repeat; 
+    position: absolute;
+    text-align: justify;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.showcase h2{
+    font-size: 30px;
+    text-align: center;
+}
+
+.background{
+    background-image: url("fundo.jpg");
+    width: 904px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.block{
+    width: 760px;
+    background-color: #aaa3a3;
+    border-radius: 55px;
+    padding: 5px;
+    margin: 25px 0px 10px 0px;
+}
+
+.block h3{
+    text-align: center;
+}
+
+.block p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+}
+
+.straight{
+    width: 900px;
+    background-color: rgb(51, 48, 51);
+    padding: 2px;
+}
+
+.new{
+    background-color: #7e7676;
+    padding: 10px;
+    height: 63px;
+}
+  
+.new h1{
+    text-align: center;
+    color: rgb(37, 37, 37);
+    font-size: 13px;
+}
+
+.submenu{
+    display: none;
+    position: absolute;
+}
+.current:hover .submenu{
+    display: block;
+}
+.current > ul li{
+    top: 15px;
+    padding: 12px 0;
+    margin-left: 118px;
+    color:#fff;
+    position: relative;
+    display: block;
+    z-index: 2;
+    text-align: center;
+    background: #6d6767;
+}
+.borda{
+    padding: 33px 10px;
+}
+.current > ul li a{
+    height: 60px;
+    min-width: 800px;
+    background: #6d6767;
+    padding: 15px 12px;
+}
+.current > ul a:hover{
+    background:rgba(95, 5, 95,0.5);
+}
+
+

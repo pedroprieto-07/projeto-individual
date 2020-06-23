@@ -1,0 +1,47 @@
+.header{
+    background: #7e7676;
+    color: #ffffff;
+    padding-top: 15px;
+    height: 70px;
+    border-bottom: #07dcf8 3px solid;
+}
+
+.header .container{
+    width:95%;
+}
+
+.header a{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.header li{
+    display: inline;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.header .title-header h1{
+    float: left;
+    margin: auto;
+}
+
+.header .highlight{
+    color: #07dcf8;
+    font-size: 30px;
+}
+
+.header .current a{
+    color: #07dcf8;
+    font-weight: bold;
+}
+
+.nav ul{
+    float: right;
+    margin-top: 10px;
+    margin: 15px;
+    padding: 0;
+}
+

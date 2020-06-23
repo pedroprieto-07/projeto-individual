@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/header.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="title-header">
+                <h1><span class="highlight">Mitologia Grega </span></h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li class="current"><a href="menu.html">Menu</a></li>
+                    <li><a href="Mitos.html">Mitos</a></li>
+                    <li class="current"><a href="personagens.html">Personagens</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="showcase">
+        <h1>Login</h1>
+        <div class="block">
+            <form id="form_login" method="post" onsubmit="return entrar()">
+
+                <div class="field">
+                    <h3> E-mail: </h3>
+                    <input id="email" placeholder="seuemail@dominio.com" required name="login">
+                </div>
+
+                <div class="field">
+                    <h3> Senha:</h3>
+                    <input id="senha" placeholder="min 6 e max 15 caracteres" type="password" required name="senha">
+                </div><br>
+
+                <button class="botao_1" type="submit" id="btn_entrar">Entrar</button><br>
+                
+                <p>
+                    Ainda não possui cadastro?
+                    <button class="botao_2"><a class="botao_2" href="cadastro.html">Cadastra-se</a></button> 
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <div class="new">
+        <h1>
+            created by Pedro Prieto <br>
+            student of Bandtec Digital School
+        </h1> 
+    </div>
+</body>
+</html>
+
+<script>
+function entrar() {
+    //aguardar();
+    var formulario = new URLSearchParams(new FormData(form_login));
+    fetch("/usuarios/autenticar", {
+        method: "POST",
+        body: formulario
+    }).then(resposta => {
+
+        if (resposta.ok) {
+
+            resposta.json().then(json => {
+
+                sessionStorage.login_usuario_meuapp = json.email;
+                sessionStorage.nome_usuario_meuapp = json.nome;
+
+                window.location.href = 'Mitos.html';
+            });
+
+        } else {
+
+           alert('Erro de login!');
+
+            response.text().then(texto => {
+                console.error(texto);
+                //finalizar_aguardar(texto);
+            });
+        }
+    });
+
+    return false;
+}
+
+//ERRO NA LINHA 84
+
+
+// function aguardar() {
+//     btn_entrar.disabled = true;
+//     img_aguarde.style.display = 'block';
+//    div_erro.style.display = 'none';
+// }
+
+// function finalizar_aguardar(resposta) {
+//    btn_entrar.disabled = false;
+//    img_aguarde.style.display = 'none';
+///    div_erro.style.display = 'block';
+//    div_erro.innerHTML = resposta;
+// }
+</script>
